@@ -1,0 +1,21 @@
+{
+    "name": "spartamwilhelm/buscador-cursos",
+    "description": "Projeto que busca os cursos no site da Alura",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Spartamwilhelm\\BuscadorCursos\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "SpartanWilhelm",
+            "email": "clguilherme3@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.4",
+        "symfony/dom-crawler": "^6.1",
+        "symfony/css-selector": "^6.1"
+    }
+}
