@@ -8,7 +8,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
     $artigo->adicionar($_POST['titulo'], $_POST['conteudo']);
 
     //redirecionar
-    header('Location: adicionar-artigo.php');
+    header('Location: /ALURA/PHP/AvancandoPHP/blog/admin/index.php');
     die();
 }
 
