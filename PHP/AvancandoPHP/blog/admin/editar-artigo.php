@@ -5,6 +5,13 @@ include '../src/Artigo.php';
 require '../src/redireciona.php';
 
 $artigo = new Artigo($mysql);
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $artigo->editar($_POST['id'], $_POST['titulo'], $_POST['conteudo']);
+
+    redireciona('/ALURA/PHP/AvancandoPHP/blog/admin/index.php');
+}
+
 $art = $artigo->encontrarPorId($_GET['id']);
 
 ?>
@@ -32,7 +39,7 @@ $art = $artigo->encontrarPorId($_GET['id']);
                 <textarea class="campo-form" type="text" name="conteudo" id="titulo"><?php echo $art['conteudo']; ?></textarea>
             </p>
             <p>
-                <input type="hidden" name="id" value="" />
+                <input type="hidden" name="id" value="<?php echo $art['id']; ?>" />
             </p>
             <p>
                 <button class="botao">Editar Artigo</button>

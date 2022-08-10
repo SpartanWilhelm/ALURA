@@ -20,9 +20,16 @@ class Artigo {
 
     public function remover(string $id): void
     {
-        $removerArtigo = $this->mysql->prepare('DELETE FROM artigos WHERE id = ?');
-        $removerArtigo->bind_param('s', $id);
-        $removerArtigo->execute();
+        $removeArtigo = $this->mysql->prepare('DELETE FROM artigos WHERE id = ?');
+        $removeArtigo->bind_param('s', $id);
+        $removeArtigo->execute();
+    }
+
+    public function editar(string $id, string $titulo, string $conteudo): void
+    {
+        $editaArtigo = $this->mysql->prepare('UPDATE artigos SET titulo = ?,conteudo = ? WHERE id = ?;');
+        $editaArtigo->bind_param('sss',$titulo, $conteudo, $id);
+        $editaArtigo->execute();
     }
 
     public function exibirTodos(): array
