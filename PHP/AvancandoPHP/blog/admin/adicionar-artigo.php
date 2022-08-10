@@ -1,7 +1,7 @@
 <?php
 
 require '../config.php';
-require '../src/Artigo.php';
+include '../src/Artigo.php';
 require '../src/redireciona.php';
 
 if($_SERVER['REQUEST_METHOD'] === 'POST'){
