@@ -7,7 +7,7 @@ require_once 'vendor/autoload.php';
 $databasePath = __DIR__ . '\banco.sqlite';
 $pdo = new PDO('sqlite:' . $databasePath);
 
-$student = new Student(null, 'César Guilherme', new \DateTimeImmutable('1983-05-02'));
+$student = new Student(null, 'Giovanna Guilherme', new \DateTimeImmutable('2017-02-26'));
 
 $sqlInsert = "INSERT INTO students (name, birth_date) VALUES (?, ?)";
 $statement = $pdo->prepare($sqlInsert);
