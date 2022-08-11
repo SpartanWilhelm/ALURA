@@ -4,10 +4,10 @@ use Alura\Pdo\Domain\Model\Student;
 
 require_once 'vendor/autoload.php';
 
-$databasePath = __DIR__ . 'banco.sqlite';
+$databasePath = __DIR__ . '\banco.sqlite';
 $pdo = new PDO('sqlite:' . $databasePath);
 
-$student = new Student(null, 'Natália Guilherme', new \DateTimeImmutable('1984-12-10'));
+$student = new Student(null, 'César Guilherme', new \DateTimeImmutable('1983-05-02'));
 
 $sqlInsert = "INSERT INTO students (name, birth_date) VALUES (?, ?)";
 $statement = $pdo->prepare($sqlInsert);
