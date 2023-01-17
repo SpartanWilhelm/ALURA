@@ -223,6 +223,10 @@ td, th {
     font-weight: bold;
 }
 
+.itens::before {
+    content: "★ ";
+}
+
 .imagembeneficios {
     width: 60%;
 }
