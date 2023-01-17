@@ -4,11 +4,13 @@ body {
 
 header {
     background: #BBBBBB;
+    /*Causa um espaçamento interno entre o elemento e o texto - Superior/inferior laterais*/
     padding: 20px 0;
 }
 
 .caixa {
     position: relative;
+    /*Largura*/
     width: 940px;
     margin: 0 auto;
 }
@@ -36,7 +38,9 @@ nav a:hover {
 }
 
 .produtos {
+    /*Tamanho*/
     width: 940px;
+    /*Margens Superior/Inferior Laterais*/
     margin: 0 auto;
     padding: 50px 0;
 }
@@ -48,7 +52,9 @@ nav a:hover {
     vertical-align: top;
     margin: 0 1.5%;
     padding: 30px 20px;
+    /*Ajuste para caber no elemento*/
     box-sizing: border-box;
+    /*Borda largura textura cor*/
     border: 2px solid #000000;
     border-radius: 10px;
 }
