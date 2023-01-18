@@ -115,16 +115,25 @@ body {
 
 .cartao_conteudo {
     padding: 16px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /*grid-template-rows: 300px;*/
+}
+
+.cartao_destaque {
+    grid-column: span 2;
 }
 
 .cartao_titulo {
     font-size: 1.2rem;
     font-weight: 700;
+    grid-column: span 2;
 }
 
 .cartao_perfil {
     color: #95999C;
     font-size: 0.9rem;
+    grid-column: span 2;
 }
 
 .cartao_info {
@@ -133,12 +142,12 @@ body {
     color: #95999C;
 }
 
-.cartao_info--tempo {
+.cartao_info--tempo::before {
     content: "\e90c";
     margin-right: 8px;
 }
 
-.cartao_info--visualizacao {
+.cartao_info--visualizacao::before {
     content: "\e90f";
     margin-right: 8px;
 }
@@ -161,15 +170,10 @@ body {
 
 .cartao_botao--destaque {
     width: 100%;
+    grid-column: span 2;
 }
 
 .cartao_botao--destaque::before{
     margin-right: 8px;
 }
 
-/*.cartao_conteudo {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 300px;
-}
-*/
