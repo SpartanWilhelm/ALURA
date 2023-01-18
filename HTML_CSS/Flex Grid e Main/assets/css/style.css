@@ -40,8 +40,8 @@ body {
     height: 100vh;
 
     position: absolute;
-    left: -100vh;
-    transition: .25s;
+    left: -1000vh;
+    transition: .80s;
 }
 
 .menu-lateral--ativo {
