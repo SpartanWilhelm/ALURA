@@ -12,7 +12,7 @@ router.register('matriculas', MatriculaViewSet, basename='Matriculas')
 router.register('certificados', CertificadoViewSet)
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('controle-geral/', admin.site.urls),
     path('', include(router.urls) ),
     path('alunos/<int:pk>/matriculas/', ListaMatriculasAluno.as_view()),
     path('cursos/<int:pk>/matriculas/', ListaAlunosMatriculados.as_view())
