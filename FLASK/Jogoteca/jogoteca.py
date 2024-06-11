@@ -15,15 +15,15 @@ lista = [jogo1, jogo2, jogo3, jogo4]
 
 app = Flask(__name__)
 
-@app.route('/inicio')
-def ola():
+@app.route('/')
+def index():
     return render_template('lista.html', titulo='Jogos', jogos=lista)
 
 @app.route('/novo')
 def novo():
     return render_template('novo.html', titulo='Novo Jogo')
 
-@app.route('/criar')
+@app.route('/criar', methods=['POST',])
 def criar():
     nome = request.form['nome']
     categoria = request.form['categoria']
@@ -33,4 +33,4 @@ def criar():
     lista.append(jogo)
     return render_template('lista.html', titulo='Jogos', jogos=lista)
 
-app.run(host='0.0.0.0', port=8080)
+app.run(debug=True, host='0.0.0.0', port=8080)
