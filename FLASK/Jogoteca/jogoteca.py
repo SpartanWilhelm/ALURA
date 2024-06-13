@@ -7,7 +7,7 @@ class Jogo:
         self.console=console
 
 jogo1 = Jogo('Yakuza', 'Hack n slash','Xbox One')
-jogo2 = Jogo('Deadfall', 'Aventura', 'PS2')
+jogo2 = Jogo('Crash Bandicoot 2', 'Aventura', 'PS2')
 jogo3 = Jogo('Mario Kart 7', 'Corrida', '3DS')
 jogo4 = Jogo('Mortal Kombat 1', 'Luta', 'PC')
 
@@ -32,5 +32,16 @@ def criar():
     jogo = Jogo(nome, categoria, console)
     lista.append(jogo)
     return redirect('/')
+
+@app.route('/login')
+def login():
+    return render_template('login.html')
+
+@app.route('/autenticar', methods=['POST',])
+def autenticar():
+    if 'alohomora' == request.form['senha']:
+        return redirect('/')
+    else:
+        return redirect('/login')
 
 app.run(debug=True, host='0.0.0.0', port=8080)
