@@ -66,10 +66,10 @@ def autenticar():
             session['usuario_logado'] = usuario.nickname
             flash(usuario.nickname + ' logado com sucesso!')
             proxima_pagina = request.form['proxima']
-            return redirect(proxima_pagina)
-    else:
-        flash('Usuário não logado!')
-        return redirect(url_for('login'))
+            return redirect(proxima_pagina)    
+        else:
+            flash('Usuário não logado.')
+            return redirect(url_for('login'))
     
 @app.route('/logout')
 def logout():
