@@ -17,3 +17,10 @@ class GenerativeModel:
                 **self.generation_config,
             ),
         )
+
+    def count_tokens(self, conteudo):
+        resposta = self.client.models.count_tokens(
+            model=self.model_name,
+            contents=conteudo,
+        )
+        return resposta.total_tokens
